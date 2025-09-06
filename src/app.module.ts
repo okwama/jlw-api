@@ -13,6 +13,8 @@ import { ActivityController } from './activity/activity.controller';
 import { ActivityService } from './activity/activity.service';
 import { DashboardController } from './dashboard/dashboard.controller';
 import { DashboardService } from './dashboard/dashboard.service';
+import { AuthController } from './auth/auth.controller';
+import { AuthService } from './auth/auth.service';
 import { User } from './entities/user.entity';
 import { NoticeBoard } from './entities/notice-board.entity';
 import { BursaryApplication } from './entities/bursary-application.entity';
@@ -49,6 +51,7 @@ import { Activity } from './entities/activity.entity';
     AmbulanceController,
     ActivityController,
     DashboardController,
+    AuthController,
   ],
   providers: [
     NoticeService,
@@ -57,6 +60,7 @@ import { Activity } from './entities/activity.entity';
     AmbulanceService,
     ActivityService,
     DashboardService,
+    AuthService,
   ],
 })
 export class AppModule {}

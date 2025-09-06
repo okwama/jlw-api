@@ -82,7 +82,7 @@ let DashboardService = class DashboardService {
         try {
             return await this.userRepository.findOne({
                 where: { id: userId },
-                select: ['id', 'name', 'email', 'phoneNumber', 'role', 'department', 'position', 'city', 'country', 'photoUrl'],
+                select: ['id', 'name', 'email', 'phoneNumber', 'role', 'nationalId', 'city', 'state', 'country', 'status', 'createdAt', 'updatedAt'],
             });
         }
         catch (error) {

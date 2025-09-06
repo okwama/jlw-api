@@ -22,6 +22,8 @@ const activity_controller_1 = require("./activity/activity.controller");
 const activity_service_1 = require("./activity/activity.service");
 const dashboard_controller_1 = require("./dashboard/dashboard.controller");
 const dashboard_service_1 = require("./dashboard/dashboard.service");
+const auth_controller_1 = require("./auth/auth.controller");
+const auth_service_1 = require("./auth/auth.service");
 const user_entity_1 = require("./entities/user.entity");
 const notice_board_entity_1 = require("./entities/notice-board.entity");
 const bursary_application_entity_1 = require("./entities/bursary-application.entity");
@@ -61,6 +63,7 @@ exports.AppModule = AppModule = __decorate([
             ambulance_controller_1.AmbulanceController,
             activity_controller_1.ActivityController,
             dashboard_controller_1.DashboardController,
+            auth_controller_1.AuthController,
         ],
         providers: [
             notice_service_1.NoticeService,
@@ -69,6 +72,7 @@ exports.AppModule = AppModule = __decorate([
             ambulance_service_1.AmbulanceService,
             activity_service_1.ActivityService,
             dashboard_service_1.DashboardService,
+            auth_service_1.AuthService,
         ],
     })
 ], AppModule);

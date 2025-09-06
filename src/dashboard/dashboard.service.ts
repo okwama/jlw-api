@@ -80,7 +80,7 @@ export class DashboardService {
     try {
       return await this.userRepository.findOne({
         where: { id: userId },
-        select: ['id', 'name', 'email', 'phoneNumber', 'role', 'department', 'position', 'city', 'country', 'photoUrl'],
+        select: ['id', 'name', 'email', 'phoneNumber', 'role', 'nationalId', 'city', 'state', 'country', 'status', 'createdAt', 'updatedAt'],
       });
     } catch (error) {
       console.error('Error fetching user profile:', error);
