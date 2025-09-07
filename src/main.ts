@@ -7,9 +7,15 @@ async function bootstrap() {
   
   // Enable CORS for Flutter app
   app.enableCors({
-    origin: ['http://localhost:3000', 'https://your-flutter-app.vercel.app'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    origin: [
+      'http://localhost:3000', 
+      'http://localhost:8080',  // Flutter web dev server
+      'https://your-flutter-app.vercel.app',
+      'https://jlw-api.vercel.app'
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'Origin', 'X-Requested-With'],
+    credentials: true,
   });
 
   // Global validation pipe
